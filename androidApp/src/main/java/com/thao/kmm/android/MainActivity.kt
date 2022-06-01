@@ -9,6 +9,10 @@ fun greet(): String {
     return Greeting().greeting()
 }
 
+fun country(): String {
+    return Greeting().countryName()
+}
+
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -16,5 +20,6 @@ class MainActivity : AppCompatActivity() {
 
         val tv: TextView = findViewById(R.id.text_view)
         tv.text = greet()
+        findViewById<TextView>(R.id.tvCountry).text = country()
     }
 }
